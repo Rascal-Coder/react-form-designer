@@ -8,10 +8,11 @@
     "build": "tsc -b && vite build",
     "format": "ras prettier-format",
     "lint": "eslint .",
+    "update-pkg": "ras update-pkg",
     "commit": "ras git-commit",
     "lint:fix": "eslint . --fix",
     "preview": "vite preview",
-    "init-git": "ras init-git-hooks"
+    "prepare": "simple-git-hooks"
   },
   "dependencies": {
     "react": "^18.3.1",
