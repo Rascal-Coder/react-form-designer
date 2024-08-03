@@ -6,21 +6,30 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "format": "ras prettier-format",
     "lint": "eslint .",
+    "commit": "ras git-commit",
     "lint:fix": "eslint . --fix",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "init-git": "ras init-git-hooks"
   },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@rascaljs/cli": "^0.5.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^8.57.0",
     "eslint-config-rascal": "^0.2.4",
+    "simple-git-hooks": "^2.11.1",
     "typescript": "^5.2.2",
     "vite": "^5.3.4"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "pnpm ras git-commit-verify",
+    "pre-commit": "pnpm lint && ras lint-staged"
   }
 }

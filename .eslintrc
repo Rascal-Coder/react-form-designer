@@ -1,28 +1,14 @@
 {
-    "extends": "rascal/react", // or rascal/base, rascal/ts, rascal/vue, rascal/vue2, rascal/react
-    "settings": {
-        "import/resolver": {
-            "alias": {
-                "map": [
-                    [
-                        "~",
-                        "."
-                    ],
-                    [
-                        "@",
-                        "./src"
-                    ]
-                ],
-                "extensions": [
-                    ".js",
-                    ".jsx",
-                    ".mjs",
-                    ".ts",
-                    ".tsx",
-                    "mts",
-                    ".d.ts"
-                ]
-            }
-        }
+  "extends": "rascal/react", // or rascal/base, rascal/ts, rascal/vue, rascal/vue2, rascal/react
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["~", "."],
+          ["@", "./src"]
+        ],
+        "extensions": [".js", ".jsx", ".mjs", ".ts", ".tsx", "mts", ".d.ts"]
+      }
     }
+  }
 }
